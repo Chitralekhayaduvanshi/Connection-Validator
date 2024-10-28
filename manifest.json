@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Connection Validator",
+  "version": "1.0",
+  "description": "Automatically checks connection details and provides validation messages.",
+  "permissions": ["activeTab"],
+  "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+  }],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
